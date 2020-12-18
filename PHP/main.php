@@ -1,3 +1,3 @@
-class main {
-    
-}
+<?php class main {
+
+}?>

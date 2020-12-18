@@ -1,3 +1,3 @@
-class payment{
+<?php class payment{
     public $id;
-}
+}?>
