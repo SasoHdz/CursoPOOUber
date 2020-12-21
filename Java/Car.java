@@ -7,6 +7,6 @@ class Car
 
     void printDataCar()
     {
-        System.out.println("Car License: "+ license + "Driver: "+ driver);
+        System.out.println("Car License: "+ license + "Name Driver: "+ driver.name);
     }
 }
