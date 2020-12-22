@@ -1,4 +1,5 @@
 <?php
+    require_once('car.php');
     class uberBlack extends Car{
         public $typeCarAccepted;
         public $seatsMaterial;
