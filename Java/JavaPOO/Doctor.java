@@ -1,11 +1,14 @@
 public class Doctor {
 
-    int id;
+    static int id;
     String name;
     String speciality;
 
-    public Doctor(int id, String name, String speciality) {
-        this.id = id;
+    public Doctor(){
+        id++;
+    }
+
+    public Doctor(String name, String speciality) {
         this.name = name;
         this.speciality = speciality;
     }
