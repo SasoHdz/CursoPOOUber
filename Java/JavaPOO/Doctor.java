@@ -3,14 +3,12 @@ public class Doctor {
     static int id;
     String name;
     String speciality;
-
-    public Doctor(){
-        id++;
-    }
+    String email;
 
     public Doctor(String name, String speciality) {
         this.name = name;
         this.speciality = speciality;
+        id++;
     }
 
     //COMPORTAMIENTOS   
