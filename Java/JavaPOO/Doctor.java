@@ -1,19 +1,19 @@
-public class Doctor {
+public class Doctor extends User {
 
-    static int id;
-    String name;
-    String speciality;
-    String email;
+    private String speciality;
 
-    public Doctor(String name, String speciality) {
-        this.name = name;
+    public Doctor(String name, String email, String speciality) {
+        super(name, email);
         this.speciality = speciality;
         id++;
     }
+    
+    public String getSpeciality() {
+        return speciality;
+    }
 
-    //COMPORTAMIENTOS   
-    public void showName(){
-        System.out.println(name);
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
     }
 
 }

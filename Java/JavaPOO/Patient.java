@@ -1,9 +1,5 @@
-public class Patient {
+public class Patient extends User {
 
-    private String name;
-    private String email;
-    private String address;
-    private String phoneNumber;
     private String birthday;
     private double weight;
     private double height;
@@ -11,18 +7,12 @@ public class Patient {
 
     Patient(String name, String email)
     {
-        this.name = name;
-        this.email = email;
+        super(name,email);
     }
 
     
     //Setters
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-
-    public void setWeight(double height)
+    public void setWeight(double weight)
     {
         this.weight = weight;
     }
@@ -39,12 +29,7 @@ public class Patient {
 
     //Getters
 
-    public String getName()
-    {
-        return this.name;
-    }
-
-    public double getWeight()
+    public String getWeight()
     {
         return this.weight + "Kg";
     }
