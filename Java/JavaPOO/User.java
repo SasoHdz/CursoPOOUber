@@ -56,5 +56,11 @@ public class User {
         System.out.println(name);
     }
 
+    @Override
+   public String toString() {
+    return "User: "+ name +", Email: "+email+
+    "\nAddress: "+addres+", Phone: "+phoneNumber;
+   }
+    
     
 }

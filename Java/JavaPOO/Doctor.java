@@ -6,7 +6,6 @@ public class Doctor extends User {
     public Doctor(String name, String email, String speciality) {
         super(name, email);
         this.speciality = speciality;
-        super.id++;
     }
     
     public String getSpeciality() {
