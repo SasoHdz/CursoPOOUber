@@ -1,6 +1,10 @@
 import static ui.UIMenu.*;
 import java.util.*;
 
+import model.Doctor;
+import model.Patient;
+import model.User;
+
 public class Main {
     public static void main(String[] args) {
         
@@ -20,7 +24,7 @@ public class Main {
 
         System.out.println();
         System.out.println();
-        Patient patient = new Patient("Alejandra", "alejandra@mail.com");
+        User patient = new Patient("Alejandra", "alejandra@mail.com");
         System.out.println(patient);
     }
 }

@@ -1,5 +1,7 @@
 package model;
+
 import java.util.*;
+
 public class Doctor extends User {
 
     private String speciality;
@@ -63,5 +65,12 @@ public class Doctor extends User {
         public String toString () {
           return   "Available Appointments \nDate: "+date+"\nTime: "+time;
         } 
+    }
+
+    @Override
+    public void showDataUser() {
+        // TODO Auto-generated method stub
+        System.out.println("Hospital: Cruz Roja");
+        System.out.println("Departamento: Cancerología");
     }
 }

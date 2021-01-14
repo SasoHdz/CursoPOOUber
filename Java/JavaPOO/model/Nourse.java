@@ -16,4 +16,11 @@ public class Nourse extends User {
         this.speciality = speciality;
     }
 
+    @Override
+    public void showDataUser() {
+        // TODO Auto-generated method stub
+        System.out.println("Hospital: Cruz Verde");
+        System.out.println("Departamentos: Nutriologia, cancerologia, pediatria");
+    }
+
 }
