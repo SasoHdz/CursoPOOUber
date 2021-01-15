@@ -1,16 +1,21 @@
 package ui;
 
+import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
+import model.Doctor;
+
 public class UIDoctorMenu {
-    
-    public static void ShowDoctorMenu()
-    {
+
+    public static ArrayList<Doctor> doctorAvailableAppointments = new ArrayList<>();
+
+    public static void ShowDoctorMenu() {
         int response = 0;
         do {
             System.out.println("\n\n");
             System.out.println("Doctor");
-            System.out.println("Welcome "+UIMenu.doctorLogged.getName());
+            System.out.println("Welcome " + UIMenu.doctorLogged.getName());
             System.out.println("1. Add Available Appointment");
             System.out.println("2. My Scheduled appointments");
             System.out.println("0. Logout");
@@ -18,21 +23,20 @@ public class UIDoctorMenu {
             Scanner sc = new Scanner(System.in);
             response = Integer.valueOf(sc.nextLine());
 
-            switch(response)
-            {
+            switch (response) {
                 case 1:
                     break;
-                case 2: 
+                case 2:
                     break;
                 case 0:
                     UIMenu.showMenu();
                     break;
             }
 
-        }while(response!=0);
+        } while (response != 0);
     }
 
-    private static void showAddAvailableAppointmentsMenu(){
+    private static void showAddAvailableAppointmentsMenu() throws ParseException {
         int response = 0;
         do{
             System.out.println();
@@ -57,8 +61,27 @@ public class UIDoctorMenu {
                 String date = sc.nextLine();
 
                 System.out.println("Your date is: "+ date + "\n1. Correct \n2. Change Date");
+                int responseDate = sc.nextInt();
+                if(responseDate == 2) continue;
+
+                int responseTime = 0;
+                String time ="";
+                do{
+                    System.out.println("Insert the time available for date: "+ date + "[16:00]");
+                    time = sc.nextLine();
+                    System.out.println("Your time is: "+ time + "\n1. Correct \n2. Change Time");
+                    responseTime = sc.nextInt();
+                }while(responseTime == 2);
+
+                UIMenu.doctorLogged.addAvailableAppointment(date,time);
+                checkDoctorAvailableAppointments(UIMenu.doctorLogged);
             }
 
         }while(response!=0);
+    }
+
+    private static void checkDoctorAvailableAppointments(Doctor doctor){
+        if(doctor.gAvailableAppointments().size()>0 
+           && !doctorAvailableAppointments.add(doctor));
     }
 }
