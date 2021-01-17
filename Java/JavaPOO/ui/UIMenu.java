@@ -114,7 +114,7 @@ public class UIMenu {
                         emailCorrect= true;
                         //Obtener Datos de usuario logeado
                         patientLogged = p;
-                        //ShowDoctorMenu
+                        UIPatientMenu.showPatientMenu();
                     }
                 }
 
